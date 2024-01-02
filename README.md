@@ -21,7 +21,7 @@ Practicing Tree Sitter queries has never been more easier. Here's why this tool 
 
 ## Getting Started 🚀
 
-1. Clone this repository: `git clone`
+1. Clone this repository: `git clone https://github.com/cpdally/tree-sitter-visualizer.git`
 2. Install dependencies: `npm install`
 3. Start the React app: `npm start`
 4. Starting the API 🛠️: Navigate to the `api` directory and start the API server with `node .\treeAPI.js`
