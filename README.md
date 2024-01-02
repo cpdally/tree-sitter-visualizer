@@ -6,16 +6,16 @@ Welcome to the Tree Sitter Visualizer! 🚀 This tool lets you explore and under
 
 ## Why Use Tree Sitter Visualizer? 🤔
 
-Practicing Tree Sitter queries has never been more easier. Here's why this tool is indispensable for honing your skills:
+Practicing Tree Sitter queries has never been easier.
 
 - **Real-time Visualization:** Explore the AST and query results with a dynamic tree component.
 - **Effortless Querying:** Run custom queries to find specific patterns in your code. The interactive tree visualization makes it easy to explore the results.
 
 - **No More toString() Mess:** Forget about deciphering those cumbersome `toString()` representations. With Tree Sitter Visualizer, you can directly interact with the tree nodes, gaining a clearer understanding of your code's structure.
 
-- **Contextual Code Views:** The context menu provides a convenient way to view code snippets for any tree node, allowing you to understand the context of each part of your code effortlessly.
+- **Contextual Code Views:** The context menu lets you view code snippets for any tree node.
 
-- **Split View:** Conveniently view both your code and the tree component side by side.
+- **Split View:** View both your code and the tree component side by side.
 
 - **Code Editor with Syntax Highlighting:** Edit your code with a syntax-highlighted editor.
 
@@ -50,28 +50,18 @@ Practicing Tree Sitter queries has never been more easier. Here's why this tool 
 
 - **Abstract Syntax Tree Tab:** Visualize the AST of your JavaScript code.
 - **Query Matches Tab:** View the results of your custom queries.
-- **Node Information Tab:** Displays all fields of a tree sitter AST node.
+- **Node Information Tab:** Displays all fields of a tree-sitter AST node.
 
 ### How the Tree Works 🌲
 
-The tree component follows the exact structure of the tree sitter tree, it is not a "pruned" abstraction. This means that all node relations map directly:
+The tree component follows the exact structure of the tree-sitter tree, it is not a "pruned" abstraction. This means that all node relations map directly:
 
 - **Interactive Tree:** Click on nodes to view detailed information.
-- **Context Menu:** Right-click on nodes for additional options, such as viewing the code snippet.
+- **Context Menu:** Right-click on nodes to view the context menu and click "View Code" to see the source code.
 - **Search:** Use the search bar to filter nodes based on your criteria.
 
 ###
 ![Demo of a source code view using Tree Sitter Visualizer](src/demos/view-code-demo.gif)
-
-## Tips 🚦
-
-- The code doesn't need to be valid; Tree Sitter will identify errors and highlight the problematic part of the tree.
-- Use Splitters to resize different parts of the screen.
-- Right-click on nodes to view the context menu and click "View Code" to see the source code.
-- Try copying the `toString()` field of the node information tab to get started with a query.
-
-###
-![Demo of a code error using Tree Sitter Visualizer](src/demos/error-demo.gif)
 
 ## Alerts 📬
 
@@ -81,9 +71,18 @@ The tree component follows the exact structure of the tree sitter tree, it is no
 ###
 ![Demo of a query error alert using Tree Sitter Visualizer](src/demos/query-error-demo.gif)
 
+## Tips 🚦
+
+- The code doesn't need to be valid; Tree Sitter will identify errors and highlight the problematic part of the tree.
+- Use Splitters to resize different parts of the screen.
+- Try copying the `toString()` field of the node information tab to get started with a query.
+
+###
+![Demo of a code error using Tree Sitter Visualizer](src/demos/error-demo.gif)
+
 ## References 🛠️
 
-Huge thanks to all my dependancies:
+Huge thanks to all my dependencies:
 
 - **PrimeReact:** A collection of rich UI components for React.
   - [PrimeReact Documentation](https://primefaces.org/primereact/showcase/#/)
