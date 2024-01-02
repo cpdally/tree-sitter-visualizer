@@ -2,6 +2,8 @@
 
 Welcome to the Tree Sitter Visualizer! 🚀 This tool lets you explore and understand your JavaScript code effortlessly. Analyze the Abstract Syntax Tree (AST), run custom queries, and visualize the results with an interactive tree component.
 
+![Image of Tree Sitter Visualizer](src/demos/main-image.png)
+
 ## Why Use Tree Sitter Visualizer? 🤔
 
 Practicing Tree Sitter queries has never been more easier. Here's why this tool is indispensable for honing your skills:
@@ -33,7 +35,7 @@ Practicing Tree Sitter queries has never been more easier. Here's why this tool 
 - **Run Code Button:** Click the "Run Code" button to parse and visualize the AST.
 
 ###
-![Demo of a parse using Tree Sitter Visualizer](src/demos/parse-demo-small.gif)
+![Demo of a parse using Tree Sitter Visualizer](src/demos/parse-demo.gif)
 
 
 ### Query Input 📜
@@ -42,7 +44,7 @@ Practicing Tree Sitter queries has never been more easier. Here's why this tool 
 - **Run Query Button:** Click the "Run Query" button to parse and visualize the AST(s).
 
 ###
-![Demo of a query using Tree Sitter Visualizer](src/demos/query-demo-small.gif)
+![Demo of a query using Tree Sitter Visualizer](src/demos/query-demo.gif)
 
 ### Tree Visualization 🌳
 
@@ -59,7 +61,7 @@ The tree component follows the exact structure of the tree sitter tree, it is no
 - **Search:** Use the search bar to filter nodes based on your criteria.
 
 ###
-![Demo of a source code view using Tree Sitter Visualizer](src/demos/view-code-demo-small.gif)
+![Demo of a source code view using Tree Sitter Visualizer](src/demos/view-code-demo.gif)
 
 ## Tips 🚦
 
@@ -69,7 +71,7 @@ The tree component follows the exact structure of the tree sitter tree, it is no
 - Try copying the `toString()` field of the node information tab to get started with a query.
 
 ###
-![Demo of a code error using Tree Sitter Visualizer](src/demos/error-demo-small.gif)
+![Demo of a code error using Tree Sitter Visualizer](src/demos/error-demo.gif)
 
 ## Alerts 📬
 
@@ -77,7 +79,7 @@ The tree component follows the exact structure of the tree sitter tree, it is no
 - Receive notifications for API or query errors.
 
 ###
-![Demo of a query error alert using Tree Sitter Visualizer](src/demos/query-error-demo-small.gif)
+![Demo of a query error alert using Tree Sitter Visualizer](src/demos/query-error-demo.gif)
 
 ## References 🛠️
 
@@ -98,4 +100,18 @@ Huge thanks to all my dependancies:
 - **tree-sitter-javascript:** The JavaScript grammar for Tree-Sitter.
   - [tree-sitter-javascript GitHub Repository](https://github.com/tree-sitter/tree-sitter-javascript)
 
-**Note:** This app is in beta, feel free to explore and enhance this Tree Sitter Visualizer! Happy queries! 🚀🌈✨
+## Known Issues 🐛
+
+1. **Code Input Display Glitch on Large Inputs:**
+   - **Issue:** Text may appear doubled in the code input field for extensive code.
+   - **Workaround:** Break down large code inputs to mitigate display problems.
+2. **Node Expansion Status Not Retained Between Tabs:**
+   - **Issue:** The selected node's expansion status is not retained when switching between AST and Query Matches tabs.
+   - **Workaround:** Manual re-expansion of nodes is required after switching tabs to maintain the selected node's visibility.
+
+3. **Node Selection Not Retained Between Tabs:**
+   - **Issue:** The selected node is not retained when navigating between AST and Query Matches tabs.
+   - **Workaround:** Re-select the node in the desired tab to view its details.
+
+
+Feel free to explore and enhance this Tree Sitter Visualizer! Happy queries! 🚀🌈✨

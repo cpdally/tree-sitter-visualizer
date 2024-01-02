@@ -110,11 +110,15 @@ const getRelationshipBetweenNodes = (sourceNode, targetNode) => {
 };
 
 app.post("/parse", (req, res) => {
-    const { code } = req.body;
-    const tree = parser.parse(code);
-    const parsedTree = parseTree(tree.rootNode);
-    // Return the parsed tree as the API response
-    res.json(parsedTree);
+    try {
+        const { code } = req.body;
+        const tree = parser.parse(code);
+        const parsedTree = parseTree(tree.rootNode);
+        res.json(parsedTree);
+    } catch (error) {
+        console.error("Error parsing code:", error);
+        res.status(400).json({ error: 'Bad request. Please check your code.' });
+    }
 });
 
 app.post("/query", (req, res) => {
@@ -137,12 +141,17 @@ app.post("/query", (req, res) => {
 });
 
 app.post("/getRelationship", (req, res) => {
-    const { code, sourceNodeKey, targetNodeKey } = req.body;
-    const tree = parser.parse(code);
-    const sourceNode = tree.rootNode.descendantForIndex(parseInt(sourceNodeKey));
-    const targetNode = tree.rootNode.descendantForIndex(parseInt(targetNodeKey));
-    const relationship = getRelationshipBetweenNodes(sourceNode, targetNode);
-    res.json({ relationship });
+    try {
+        const { code, sourceNodeKey, targetNodeKey } = req.body;
+        const tree = parser.parse(code);
+        const sourceNode = tree.rootNode.descendantForIndex(parseInt(sourceNodeKey));
+        const targetNode = tree.rootNode.descendantForIndex(parseInt(targetNodeKey));
+        const relationship = getRelationshipBetweenNodes(sourceNode, targetNode);
+        res.json({ relationship });
+    } catch (error) {
+        console.error("Error getting relationship:", error);
+        res.status(400).json({ error: 'Bad request. Please check your inputs.' });
+    }
 });
 
 app.listen(port, () => {

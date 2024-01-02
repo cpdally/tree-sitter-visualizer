@@ -41,6 +41,7 @@ The TreeAPI serves as the backend for Tree Sitter Visualizer, handling parsing, 
 
 ## Notes
 - Ensure the TreeAPI server is running before interacting with the React app.
+- The Get Node Relationship endpoint is not currently in use.
 - CORS is temporarily allowed for testing purposes.
 - For query errors, a 400 status with an error message is returned.
 - Check the console for server status when running code or queries.
