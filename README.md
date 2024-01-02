@@ -46,11 +46,6 @@ Practicing Tree Sitter queries has never been easier.
 ###
 ![Demo of a query using Tree Sitter Visualizer](src/demos/query-demo.gif)
 
-### Tree Visualization 🌳
-
-- **Abstract Syntax Tree Tab:** Visualize the AST of your JavaScript code.
-- **Query Matches Tab:** View the results of your custom queries.
-- **Node Information Tab:** Displays all fields of a tree-sitter AST node.
 
 ### How the Tree Works 🌲
 
