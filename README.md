@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# Tree Sitter Visualizer 🌳
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Tree Sitter Visualizer! 🚀 This tool lets you explore and understand your JavaScript code effortlessly. Analyze the Abstract Syntax Tree (AST), run custom queries, and visualize the results with an interactive tree component.
 
-## Available Scripts
+## Why Use Tree Sitter Visualizer? 🤔
 
-In the project directory, you can run:
+Practicing Tree Sitter queries has never been more easier. Here's why this tool is indispensable for honing your skills:
 
-### `npm start`
+- **Real-time Visualization:** Explore the AST and query results with a dynamic tree component.
+- **Effortless Querying:** Run custom queries to find specific patterns in your code. The interactive tree visualization makes it easy to explore the results.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **No More toString() Mess:** Forget about deciphering those cumbersome `toString()` representations. With Tree Sitter Visualizer, you can directly interact with the tree nodes, gaining a clearer understanding of your code's structure.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Contextual Code Views:** The context menu provides a convenient way to view code snippets for any tree node, allowing you to understand the context of each part of your code effortlessly.
 
-### `npm test`
+- **Split View:** Conveniently view both your code and the tree component side by side.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Code Editor with Syntax Highlighting:** Edit your code with a syntax-highlighted editor.
 
-### `npm run build`
+## Getting Started 🚀
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone this repository: `git clone`
+2. Install dependencies: `npm install`
+3. Start the React app: `npm start`
+4. Starting the API 🛠️: Navigate to the `api` directory and start the API server with `node .\treeAPI.js`
+5. Make sure the API server is running before using the React app.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage 📚
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Code Input 📝
 
-### `npm run eject`
+- **Code Input Tab:** Enter your JavaScript code in the provided code editor.
+- **Run Code Button:** Click the "Run Code" button to parse and visualize the AST.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+###
+![Demo of a parse using Tree Sitter Visualizer](src/demos/parse-demo-small.gif)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Query Input 📜
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Query Input Tab:** Enter your Tree Sitter Query in the provided Query editor.
+- **Run Query Button:** Click the "Run Query" button to parse and visualize the AST(s).
 
-## Learn More
+###
+![Demo of a query using Tree Sitter Visualizer](src/demos/query-demo-small.gif)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Tree Visualization 🌳
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Abstract Syntax Tree Tab:** Visualize the AST of your JavaScript code.
+- **Query Matches Tab:** View the results of your custom queries.
+- **Node Information Tab:** Displays all fields of a tree sitter AST node.
 
-### Code Splitting
+### How the Tree Works 🌲
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The tree component follows the exact structure of the tree sitter tree, it is not a "pruned" abstraction. This means that all node relations map directly:
 
-### Analyzing the Bundle Size
+- **Interactive Tree:** Click on nodes to view detailed information.
+- **Context Menu:** Right-click on nodes for additional options, such as viewing the code snippet.
+- **Search:** Use the search bar to filter nodes based on your criteria.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+###
+![Demo of a source code view using Tree Sitter Visualizer](src/demos/view-code-demo-small.gif)
 
-### Making a Progressive Web App
+## Tips 🚦
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- The code doesn't need to be valid; Tree Sitter will identify errors and highlight the problematic part of the tree.
+- Use Splitters to resize different parts of the screen.
+- Right-click on nodes to view the context menu and click "View Code" to see the source code.
+- Try copying the `toString()` field of the node information tab to get started with a query.
 
-### Advanced Configuration
+###
+![Demo of a code error using Tree Sitter Visualizer](src/demos/error-demo-small.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Alerts 📬
 
-### Deployment
+- When you hit the "Run Code" or "Run Query" button, check the notification for the status of your query or code parsing.
+- Receive notifications for API or query errors.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+###
+![Demo of a query error alert using Tree Sitter Visualizer](src/demos/query-error-demo-small.gif)
 
-### `npm run build` fails to minify
+## References 🛠️
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Huge thanks to all my dependancies:
+
+- **PrimeReact:** A collection of rich UI components for React.
+  - [PrimeReact Documentation](https://primefaces.org/primereact/showcase/#/)
+
+- **Tree-Sitter:** A parser generator tool and an incremental parsing library.
+  - [Tree-Sitter GitHub Repository](https://github.com/tree-sitter/tree-sitter)
+
+- **Prism:** A lightweight, extensible syntax highlighter.
+  - [Prism GitHub Repository](https://github.com/PrismJS/prism)
+
+- **Express:** A fast, unopinionated, minimalist web framework for Node.js.
+  - [Express.js Documentation](https://expressjs.com/)
+
+- **tree-sitter-javascript:** The JavaScript grammar for Tree-Sitter.
+  - [tree-sitter-javascript GitHub Repository](https://github.com/tree-sitter/tree-sitter-javascript)
+
+**Note:** This app is in beta, feel free to explore and enhance this Tree Sitter Visualizer! Happy queries! 🚀🌈✨
